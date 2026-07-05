@@ -13,9 +13,7 @@ from mindmap.html_renderer import create_markmap_html
 from utils.validators import get_extension, validate_upload
 
 st.set_page_config(page_title="Mindmapify - AI-Powered Mindmaps", layout="wide")
-st.sidebar.success(f"Gemini Configured: {config.is_gemini_configured()}")
-st.sidebar.success(f"Groq Configured: {config.is_groq_configured()}")
-st.sidebar.success(f"HF Configured: {config.is_hf_configured()}")
+
 
 @st.cache_resource
 def get_ai_chain() -> AIFallbackChain:
